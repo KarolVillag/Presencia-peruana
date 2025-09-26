@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    z-index: 2000;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        z-index: 9999; 
+    }
+
+    nav ul.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+.hero {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: url("../img/Fondo.png") no-repeat center center/cover;
+    filter: blur(5px) brightness(0.7);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.btn {
+    background: #f4c542;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+#especialidades {
+    text-align: center;
+    background: #fff8f0;
+}
+
+#especialidades h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #4b2e0d;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel .card {
+    flex: 0 0 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.carousel .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel .card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #4b2e0d;
+}
+
+.carousel .card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 22px;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.historia {
+    background: #f9f9f9;
+    padding: 60px 8%;
+}
+
+.historia h2 {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #4b2e0d;
+}
+
+.historia-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.historia img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.historia p {
+    max-width: 500px;
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contacto {
+    text-align: center;
+    background: #fff8f0;
+}
+
+.contacto h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #4b2e0d;
+}
+
+.mapa {
+    margin-top: 25px;
+}
+
+.mapa iframe {
+    width: 90%;
+    max-width: 1100px;
+    height: 480px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.menu-completo {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+.menu-completo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4b2e0d;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-grid .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-grid .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.menu-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.menu-grid h3 {
+    color: #4b2e0d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-grid p {
+    color: #555;
+    font-size: 16px;
+}
+
+footer {
+    background: #0c0701;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+.menu-banner {
+    width: 100%;
+    height: 300px;
+    background: url("../img/banner.png") no-repeat center center;
+    background-size: contain;
+    background-color: #000;
+}
+
+.texto-contacto {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+footer {
+    background: #0c0701;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+footer .redes {
+    margin-top: 10px;
+}
+
+footer .redes a {
+    margin: 0 8px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+footer .redes a:hover {
+    transform: scale(1.2);
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: white;
+    border: 2px solid #4b2e0d;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    z-index: 2000;
+}
+
+#chat-header {
+    background: #4b2e0d;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#chat-options {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#chat-options button {
+    background: #f4c542;
+    border: none;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+#chat-options button:hover {
+    background: #d9a81e;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .menu-grid img {
+        height: 160px;
+    }
+}
+
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b2e0d;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2100;
+    transition: transform 0.3s;
+}
+#chat-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+#chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 420px;
+    max-height: 600px;
+    background: white;
+    border: 2px solid #4b2e0d;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#chatbot.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+#chat-header {
+    background: #3d292b; 
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 20px;      
+    font-weight: bold;    
+    letter-spacing: 0.5px; 
+}
+
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#chat-body img {
+    max-width: 100%;   
+    height: auto;         
+    border-radius: 8px;   
+    margin: 8px 0;         
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+}
+
+#chat-options {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    text-align: center;
+}
+#chat-options button {
+    background: #f4c542;
+    border: none;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+#chat-options button:hover {
+    background: #d9a81e;
+}

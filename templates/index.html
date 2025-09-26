@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presencia Peruana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Presencia Peruana</div>
+        <div id="nav-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="{{ url_for('menu') }}">Menú</a></li>
+            <li><a href="#historia">Nuestra Historia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="inicio" class="hero">
+        <h1>Presencia Peruana: Sabor Peruano Auténtico en el Rímac</h1>
+        <p>Desarrollamos productos exclusivos al gusto y exigencia del cliente.</p>
+    </section>
+    <section id="especialidades">
+        <h2>Nuestras Delicias Peruanas</h2>
+        <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/boliyucas.webp') }}" alt="Boliyucas de carne">
+                    <h3>Boliyuca de queso</h3>
+                    <p>Deliciosa yuca rellena con queso.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/encamotados.webp') }}" alt="Boliyucas de carne"> 
+                    <h3>Encamotados</h3>
+                    <p>Dulce tradicional hecho con camote y relleno de carne.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/papa_rellena.webp') }}" alt="Papa rellena">                    
+                    <h3>Papa rellena</h3>
+                    <p>Un clásico peruano preparado con cariño.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/tequeños.webp') }}" alt="Tequeños con Jamon y queso">                    
+                    <h3>Tequeño de jamón y queso</h3>
+                    <p>Crocantes rellenos de jamón y queso.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/wantan.webp') }}" alt="Wantan relleno">                    
+                    <h3>Wantan relleno</h3>
+                    <p>El rey de la mesa peruana, fresco y delicioso relleno de pollo.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/tequeños_aji.png') }}" alt="Tequeños de aji">
+                    <h3>Tequeños de Ají de Gallina</h3>
+                    <p>Fusión peruana con el clásico ají de gallina.</p>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+        <a href="{{ url_for('menu') }}" class="btn" style="margin-top: 30px; display:inline-block;">Ver Menú Completo</a>
+    </section>
+    <section id="historia" class="historia">
+        <h2>Nuestra Historia: Tradición en Cada Bocado</h2>
+        <div class="historia-contenido">
+            <img src="{{ url_for('static', filename='img/apoyo.JPG') }}" alt="empleados">
+            <p>
+                Somos una empresa peruana con más de 20 años de experiencia en el rubro de productos precocidos congelados listo para freír y consumir.
+                Supervisados permanentemente por SGS del Perú, garantizamos calidad y sanidad alimentaria.
+                Nuestra área de creatividad elabora productos exclusivos con especias originales del Perú, posicionando a <b>PRESENCIA PERUANA</b> como pionera en el rubro.
+            </p>
+        </div>
+    </section>
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <p class="texto-contacto">Visítanos en el Rímac y vive la experiencia Peruana. Además, encuéntranos en nuestras <b>redes sociales al final de la página</b> dándole click al icono!</p>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.88243104217622!2d-77.024104964382!3d-12.035334828586539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf3f1cfb9a7f%3A0x19609950431a6daf!2sPresencia%20Peruana%20SAC!5e0!3m2!1ses-419!2spe!4v1757814228631!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+<footer>
+    <p>&copy; 2025 Presencia Peruana - Todos los derechos reservados</p>
+    <div class="redes">
+        <a href="https://www.facebook.com/PresenciaPeruanaSAC" target="_blank" aria-label="Facebook">
+            <!--Icono Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.333C0 23.403.596 24 1.325 
+                24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 
+                4.659-4.788 1.325 0 2.463.097 2.796.141v3.24l-1.918.001c-1.504 
+                0-1.795.715-1.795 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.403 
+                24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/presenciaperuana/" target="_blank" aria-label="Instagram">
+            <!-- Icono Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 
+                2.633.35 3.608 1.325.975.975 1.262 2.242 
+                1.325 3.608.058 1.266.069 1.646.069 
+                4.834s-.012 3.568-.07 4.834c-.062 1.366-.35 
+                2.633-1.325 3.608-.975.975-2.242 
+                1.262-3.608 1.325-1.266.058-1.646.069-4.834.069s-3.568-.012-4.834-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.262-2.242-1.325-3.608C2.175 
+                15.568 2.163 15.188 2.163 
+                12s.012-3.568.07-4.834c.062-1.366.35-2.633 
+                1.325-3.608.975-.975 2.242-1.262 
+                3.608-1.325C8.432 2.175 8.812 2.163 
+                12 2.163zm0 3.675a6.162 6.162 0 100 
+                12.324 6.162 6.162 0 000-12.324zm0 
+                10.162a3.999 3.999 0 110-7.998 3.999 
+                3.999 0 010 7.998zm6.406-11.845a1.44 
+                1.44 0 11-2.88 0 1.44 1.44 0 
+                012.88 0z"/>
+            </svg>
+        </a>
+        </div>
+    </footer>
+    <div id="chat-toggle">💬</div>
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div id="chat-header">Asistente Presencia Peruana</div>
+        <div id="chat-body"></div>
+        <div id="chat-options"></div>
+    </div>
+
+    <!-- Cambié las rutas de JS -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

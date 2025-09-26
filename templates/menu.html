@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Completo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Presencia Peruana</div>
+        <!-- Toggle hamburguesa igual que en index -->
+        <div id="nav-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <li><a href="{{ url_for('home') }}#inicio">Inicio</a></li>
+            <li><a href="{{ url_for('home') }}#especialidades">Especialidades</a></li>
+            <li><a href="{{ url_for('menu') }}">Menú</a></li>
+            <li><a href="{{ url_for('home') }}#historia">Nuestra Historia</a></li>
+            <li><a href="{{ url_for('home') }}#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+        <section class="menu-banner"></section>
+    <section class="menu-completo">
+        <h2>Menú Completo</h2>
+        <div class="menu-grid">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/boliyucas.webp') }}" alt="Boliyuca de queso">
+                <h3>Boliyuca de Queso</h3>
+                <p>Yuca dorada rellena con queso suave y fundido, perfecta para empezar con un bocado crujiente y delicioso.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/encamotados.webp') }}" alt="Encamotados">
+                <h3>Encamotados</h3>
+                <p>Dulce tradicional de camote relleno con carne sazonada, mezcla de lo criollo y lo casero en cada mordida.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/papa_rellena.webp') }}" alt="Papa Rellena">
+                <h3>Papa Rellena</h3>
+                <p>Clásico de la gastronomía peruana: papa dorada rellena de carne, cebolla y aceitunas. ¡Un favorito infaltable!</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/tequeños.webp') }}" alt="Tequeños jamón y queso">
+                <h3>Tequeños de Jamón y Queso</h3>
+                <p>Masa crujiente rellena de jamón y queso, el acompañante perfecto para cualquier ocasión.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/wantan.webp') }}" alt="Wantan relleno">
+                <h3>Wantan Relleno</h3>
+                <p>Crocante por fuera y jugoso por dentro, relleno de pollo fresco con un toque de especias peruanas.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/tequeños_aji.png') }}" alt="Tequeños de ají de gallina">
+                <h3>Tequeños de Ají de Gallina</h3>
+                <p>Fusión deliciosa: el clásico ají de gallina en un crocante tequeño que enamora al primer bocado.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/tequeños_lomo.webp') }}" alt="Tequeños de lomo saltado">
+                <h3>Tequeños de Lomo Saltado</h3>
+                <p>Una explosión de sabor peruano: rellenos con jugoso lomo saltado y un toque de salsa criolla.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/Paliyucas.webp') }}" alt="Paliyucas">
+                <h3>Paliyucas</h3>
+                <p>Pequeñas yucas fritas y rellenas, un aperitivo crocante con el auténtico sabor casero peruano.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/boliyuca_carne.webp') }}" alt="Boliyuca de carne">
+                <h3>Boliyuca de Carne</h3>
+                <p>Yuca doradita rellena de carne sazonada al estilo criollo, una opción sabrosa y contundente.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Presencia Peruana - Todos los derechos reservados</p>
+    <div class="redes">
+        <a href="https://www.facebook.com/PresenciaPeruanaSAC" target="_blank" aria-label="Facebook">
+            <!-- Icono Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.333C0 23.403.596 24 1.325 
+                24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 
+                4.659-4.788 1.325 0 2.463.097 2.796.141v3.24l-1.918.001c-1.504 
+                0-1.795.715-1.795 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.403 
+                24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/presenciaperuana/" target="_blank" aria-label="Instagram">
+            <!-- Icono Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 
+                2.633.35 3.608 1.325.975.975 1.262 2.242 
+                1.325 3.608.058 1.266.069 1.646.069 
+                4.834s-.012 3.568-.07 4.834c-.062 1.366-.35 
+                2.633-1.325 3.608-.975.975-2.242 
+                1.262-3.608 1.325-1.266.058-1.646.069-4.834.069s-3.568-.012-4.834-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.262-2.242-1.325-3.608C2.175 
+                15.568 2.163 15.188 2.163 
+                12s.012-3.568.07-4.834c.062-1.366.35-2.633 
+                1.325-3.608.975-.975 2.242-1.262 
+                3.608-1.325C8.432 2.175 8.812 2.163 
+                12 2.163zm0 3.675a6.162 6.162 0 100 
+                12.324 6.162 6.162 0 000-12.324zm0 
+                10.162a3.999 3.999 0 110-7.998 3.999 
+                3.999 0 010 7.998zm6.406-11.845a1.44 
+                1.44 0 11-2.88 0 1.44 1.44 0 
+                012.88 0z"/>
+            </svg>
+        </a>
+    </div>
+    </footer>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
